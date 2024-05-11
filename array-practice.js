@@ -1,13 +1,29 @@
 const findMinimum = arr => {
-
-  // Your code here 
-
+  let min = arr[0];
+  for(let i = 1; i < arr.length; i++){ 
+    if (arr[i] < min){
+      min = arr[i]
+    }
+    
+  }
+  return min;
+  // time: O(n) and Space O(1)
 };
+
 
 const runningSum = arr => {
-
-  // Your code here 
+  let summedArray = [];
+  for(let i = 0; i < arr.length; i++){
+    if(i === 0) {
+      summedArray.push(arr[i])
+    }
+    else summedArray.push(arr[i] + summedArray[i-1])
+  }
+  return summedArray;
+  // time: O(n) space: O(n)
 };
+
+
 
 const evenNumOfChars = arr => {
 
